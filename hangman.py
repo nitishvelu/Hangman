@@ -2,6 +2,7 @@ from random import *
 import os
 from subprocess import call
 from time import sleep
+
 #define a function img 
 
 
@@ -26,6 +27,11 @@ def menu:
 		else:
 			x=0
 	return choice
+
+#declaring dictionaries as themes"
+cat_list= {"Cars":["maserati","lamborghini","pagani","jaguar","tesla","honda","toyota","maruti","ford","tata"], "fruits":["banana","orange","papaya","melon","mango","guava","tomato","almond","figs","kiwi"],"animals":["monkey","pig","donkey","bison","human","orangutan","dog","kookaburra","python","okapi"],"appliances":["fan","toaster","cooler","tubelight","telephone","cellphone","projector","desktop","laptop","smartwatch"],"countries":["india","iraq","iran","italy","china","afghanistan","kazakhistan","russia","australia","austria"]}
+
+
 #showing the menu and clearing the screen after choice is entered
 choice=menu()
 sleep(1)

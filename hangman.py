@@ -1,4 +1,4 @@
-from random import *
+import random 
 import os
 from subprocess import call
 from time import sleep
@@ -12,7 +12,7 @@ def clear():
 	_ =call('clear'if os.name=='posix' else 'cls')
 
 #defining the menu of the game categories
-def menu:
+def menu():
 	j=1
 	x=1	
 	print("welcome to hangman")
@@ -37,8 +37,23 @@ choice=menu()
 sleep(1)
 clear()
 
-cat=cat_list[choice-1]
-x=randrange(0,len(cat))
+
+
+if choice==1:
+	sel="cars"
+elif choice==2:
+	sel="fruits"
+elif choice==3:
+	sel="animals"
+elif choice==4:
+	sel="appliances"
+else:
+	sel="countries"
+	
+	
+cat=list()	
+cat=cat_list[sel]
+x=random.randrange(0,len(cat))
 word=cat[x]
 enword="_"*len(word)
 life=5
